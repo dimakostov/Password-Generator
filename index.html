@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+
+      <div class="card">
+
+        <div class="card-header">
+          <h2 id="header-text">Generate a Password</h2>
+        </div>
+        
+        <div class="card-body">
+
+          <!-- password length entry block -->
+          <div id="password-length">
+            <label for="length">Enter the desired password length(8-128):</label>
+            <input type="text" name="length" id="lengthTxt"/>
+            <button class="btn-next" type="button" id="btnLength">Next -->></button>
+          </div>
+          <div id="password-wrapper">
+            <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password">
+            </textarea>
+          </div>
+
+          <!-- password criteria choices -->
+          <div id="password-criteria" style="display: none;">
+            
+            <h3>Select password criteria(at least one):</h3>
+
+            <div class="chkCriteria">
+            <input type="checkbox" name="chkLower" id="chkLower"/>
+            <label for="chkLower">Lower case letters</label>
+            </div>
+
+            <div class="chkCriteria">
+            <input type="checkbox" name="chkUpper" id="chkUpper"/>
+            <label for="chkUpper">Upper case letters</label>
+            </div>
+
+            <div class="chkCriteria">
+            <input type="checkbox" name="chkSpecial" id="chkSpecial"/>
+            <label for="chkSpecial">Special characters</label>
+            </div>
+
+            <div class="chkCriteria">
+            <input type="checkbox" name="chkNums" id="chkNums"/>
+            <label for="chkNums">Numbers</label>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card-footer" style="display: none;">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="./assets/scripts/script.js"></script>
+
+  </body>
+</html>
